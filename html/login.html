@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script type="text/javascript">
+        function validation() {
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+
+            if (email.value.trim() == "" && password.value.trim() == "") {
+                alert("Please enter email and password")
+                email.style.border = "2px solid red";
+                password.style.border = "2px solid red";
+                return false;
+            } else {
+                true;
+
+                if (email.value.trim() == "") {         //if emailis empty error is given
+                    email.style.border = "2px solid red";
+                    document.getElementById("mail").style.visibility = "visible";
+                    return false;
+                } else {
+                    document.getElementById("mail").style.visibility = "invisible";
+                    true;
+                }
+
+                if (password.value.trim() == "") {          //if password is empty error is given
+                    password.style.border = "2px solid red";
+                    document.getElementById("pword").style.visibility = "visible";
+                    return false;
+                }
+                else {
+                    document.getElementById("pword").style.visibility = "invisible";
+                    true;
+                }
+                if (password.value.length < 8) {        //if password is less than 8 letters popup appears
+                    alert("Password too short")
+                    password.style.border = "2px solid red";
+                    document.getElementById("pword").style.visibility = "visible";
+                    return false;
+                } else {
+                    document.getElementById("pword").style.visibility = "invisible";
+                    true;
+                }
+            }
+            alert("Loged In")
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" action="/homepage.html">
+            <h1>Login</h1>
+            <div class="input-control">
+                <label>Email</label>
+                <input type="email" placeholder="Enter email address" id="email">
+                <label id="mail" style="color: red; visibility: hidden;">Invalid</label>
+            </div>
+            <div class="input-control">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" id="password">
+                <label id="pword" style="color: red; visibility: hidden;">Invalid</label>
+                <div style="display: flex">
+                    <button type="submit" style="margin-right: 5px;" onclick="return validation()"> Login</button>
+                    <button type="submit" style="margin-left: 5px;">
+                        <a href="/homepage.html"
+                            style="text-decoration: none; font-size: 20px; color: white;">Cancel</a>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

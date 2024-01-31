@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <script src="/javascript/script.js"></script>
+</head>
+<!-- body -->
+<body>
+    <div class="container">
+        <form class="form" action="/homepage.html">             <!-- form-->
+            <h1>Sign Up</h1>
+            <div class="input-control">
+                <label>Username</label>
+                <input type="text" id="user-name" placeholder="Choose username">
+                <label id="uname" style="color: red; visibility: hidden;">Invalid</label>
+            </div>
+            <div class="input-control">
+                <label>Email</label>
+                <input type="email" id="e-mail" placeholder="Enter email">
+                <label id="mail" style="color: red; visibility: hidden;">Invalid</label>
+            </div>
+            <div class="input-control">
+                <label>Password</label>
+                <input type="password" id="pass-word" placeholder="Choose password">
+                <label id="pword" style="color: red; visibility: hidden;">Invalid</label>
+            </div>
+            <div class="input-control">
+                <label>Confirm Password</label>
+                <input type="password" id="final-password" placeholder="Re-enter password">
+                <label id="surepassword" style="color: red; visibility: hidden;">Invalid</label>
+                <div style="display: flex">
+                    <button type="submit" style="margin-right: 5px;" onclick="return signupValidation()">Sign
+                        Up</button>
+                    <button type="submit" style="margin-left: 5px;">Cancel</button>
+                </div>
+            </div>
+        </form>
+        <div>
+        </div>
+    </div>
+</body>
+
+</html>

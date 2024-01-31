@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(25, 34, 32);
+}
+/* css for form */
+.form {
+  font-family: Helvetica;
+  width: 400px;
+  margin: 100px auto;
+  padding: 29px;
+  background-color: rgb(142, 141, 141);
+  border-radius: 16px;
+  font-size: 19px;
+  box-shadow: 0 15px 18px 0 rgba(90, 84, 84, 0.997),
+    0 16px 20px 0 rgb(110, 98, 98);
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  background-color: rgb(58, 58, 60);
+  border: none;
+  border-radius: 6px;
+}
+/* effect on hover */
+button:hover {
+  background-color: rgb(86, 81, 81);
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid rgb(63, 63, 63);
+  border-radius: 6px;
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
